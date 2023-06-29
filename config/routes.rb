@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/new'
-  get 'users/create'
+  resource :user, only: %i[new create]
   root 'static_pages#top'
 end
